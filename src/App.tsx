@@ -72,22 +72,22 @@
 
 // export default App;
 
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import News from './pages/News';
-import Shop from './pages/Shop';
-import Chat from './pages/Chat';
-import Articles from './pages/Articles';
-import Login from './pages/Login';
-import SignUp from './pages/SignUp';
-import Profile from './pages/user/UserProfile';
-import PlayerStats from './pages/stats/PlayerStats';
-import MatchDetails from './pages/stats/MatchDetails';
-import TeamStats from './pages/stats/TeamStats';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import News from "./pages/News";
+import Shop from "./pages/Shop";
+import Chat from "./pages/Chat";
+import Articles from "./pages/Articles";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
+import Profile from "./pages/user/UserProfile";
+import PlayerStats from "./pages/stats/PlayerStats";
+import MatchDetails from "./pages/stats/MatchDetails";
+import TeamStats from "./pages/stats/TeamStats";
+import "./App.css";
 
 const App: React.FC = () => {
   return (
@@ -116,4 +116,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-

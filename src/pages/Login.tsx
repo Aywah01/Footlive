@@ -48,3 +48,57 @@ const Login: React.FC = () => {
 };
 
 export default Login;
+
+// import React, { useState } from "react";
+// import { useNavigate } from "react-router-dom";
+// //import { useAuth } from "../context/AuthContext"; // Import the useAuth hook
+
+// const Login: React.FC = () => {
+//   const [username, setUsername] = useState("");
+//   const [password, setPassword] = useState("");
+//   //const { login } = useAuth();
+//   const navigate = useNavigate();
+
+//   const handleLogin = () => {
+//     // Perform login logic here (e.g., authenticate with server)
+//     // If successful, call the login method and navigate to the home page
+//     //login();
+//     navigate("/");
+//   };
+
+//   return (
+//     <div>
+//       <h2>Login</h2>
+//       <form
+//         onSubmit={(e) => {
+//           e.preventDefault();
+//           handleLogin();
+//         }}
+//       >
+//         <div>
+//           <label>
+//             Username:
+//             <input
+//               type="text"
+//               value={username}
+//               onChange={(e) => setUsername(e.target.value)}
+//             />
+//           </label>
+//         </div>
+//         <div>
+//           <label>
+//             Password:
+//             <input
+//               type="password"
+//               value={password}
+//               onChange={(e) => setPassword(e.target.value)}
+//             />
+//           </label>
+//         </div>
+//         <button type="submit">Login</button>
+//       </form>
+//     </div>
+//   );
+// };
+
+// export default Login;
