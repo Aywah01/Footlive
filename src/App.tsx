@@ -1,37 +1,5 @@
 // import React from "react";
 // import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-// import NavBar from "./components/NavBar";
-// import Home from "./components/Home";
-// import Login from "./components/Login";
-// import SignUp from "./components/SignUp";
-// import MatchDetails from "./components/MatchDetails";
-// import PlayerStats from "./components/PlayerStats";
-// import TeamStats from "./components/TeamStats";
-// import UserProfile from "./components/UserProfile";
-
-// const App: React.FC = () => {
-//   return (
-//     <Router>
-//       <div>
-//         <NavBar />
-//         <Routes>
-//           <Route path="/" element={<Home />} />
-//           <Route path="/login" element={<Login />} />
-//           <Route path="/signup" element={<SignUp />} />
-//           <Route path="/match/:id" element={<MatchDetails />} />
-//           <Route path="/player/:id" element={<PlayerStats />} />
-//           <Route path="/team/:id" element={<TeamStats />} />
-//           <Route path="/profile" element={<UserProfile />} />
-//         </Routes>
-//       </div>
-//     </Router>
-//   );
-// };
-
-// export default App;
-
-// import React from "react";
-// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import Header from "./components/Header";
 // import Footer from "./components/Footer";
 // import Home from "./pages/Home";
@@ -77,12 +45,12 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import News from "./pages/News";
-import Shop from "./pages/Shop";
-import Chat from "./pages/Chat";
-import Articles from "./pages/Articles";
-import Login from "./pages/Login";
-import SignUp from "./pages/SignUp";
+import News from "./pages/news/News";
+import Shop from "./pages/shop/Shop";
+import Chat from "./pages/chat/Chat";
+import Articles from "./pages/articles/Articles";
+import Login from "./pages/login/Login";
+import SignUp from "./pages/signup/SignUp";
 import Profile from "./pages/user/UserProfile";
 import PlayerStats from "./pages/stats/PlayerStats";
 import MatchDetails from "./pages/stats/MatchDetails";

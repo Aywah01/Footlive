@@ -1,10 +1,11 @@
 import React from "react";
+import styles from "./news.module.css";
 
 const News: React.FC = () => {
   return (
-    <div>
-      <h1>News</h1>
-      <p>
+    <div className={styles.newsContainer}>
+      <h1 className={styles.newsTitle}>News</h1>
+      <p className={styles.newsParagraph}>
         Welcome to the News page. Here you will find the latest football news
         and updates.
       </p>

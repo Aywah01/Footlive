@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import Alert from "../components/Alert";
+import Alert from "../../components/Alert";
+import styles from "./signup.module.css";
 
 const SignUp: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -20,7 +21,7 @@ const SignUp: React.FC = () => {
   };
 
   return (
-    <div className="container mt-5">
+    <div className={styles.container}>
       <h2>Sign Up</h2>
       <Alert message={error} />
       <form onSubmit={handleSignUp}>
@@ -28,7 +29,7 @@ const SignUp: React.FC = () => {
           <label>Email:</label>
           <input
             type="email"
-            className="form-control"
+            className={styles.formControl}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -37,7 +38,7 @@ const SignUp: React.FC = () => {
           <label>Password:</label>
           <input
             type="password"
-            className="form-control"
+            className={styles.formControl}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
@@ -46,12 +47,12 @@ const SignUp: React.FC = () => {
           <label>Confirm Password:</label>
           <input
             type="password"
-            className="form-control"
+            className={styles.formControl}
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className={styles.btn}>
           Sign Up
         </button>
       </form>

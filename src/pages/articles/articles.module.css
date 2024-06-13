@@ -1,0 +1,23 @@
+/* articles.module.css */
+
+.articlesContainer {
+    padding: 20px;
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .articlesTitle {
+    color: #343a40;
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .articlesParagraph {
+    color: #6c757d;
+    font-size: 1.2em;
+    line-height: 1.5;
+  }
+  
