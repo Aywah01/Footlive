@@ -2,7 +2,14 @@ import React, { createContext, useContext, useState, ReactNode } from "react";
 
 interface AuthContextProps {
   user: { name: string; email: string } | null;
-  login: (user: { name: string; email: string }) => void;
+  login: (user: {
+    name: string;
+    email: string;
+    gender: string;
+    interestCountry: string;
+    interestLeague: string;
+    interestPlayer: string;
+  }) => void;
   logout: () => void;
 }
 

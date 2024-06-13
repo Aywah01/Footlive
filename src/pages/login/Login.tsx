@@ -8,15 +8,26 @@ const Login: React.FC = () => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [gender, setGender] = useState(""); // State for gender
+  const [interestCountry, setInterestCountry] = useState("");
+  const [interestLeague, setInterestLeague] = useState("");
+  const [interestPlayer, setInterestPlayer] = useState("");
   const { login } = useAuth();
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (email === "" || password === "" || name === "") {
+    if (email === "" || password === "" || name === "" || gender === "") {
       setError("Please fill in all fields");
     } else {
       setError("");
-      login({ name, email });
+      login({
+        name,
+        email,
+        gender,
+        interestCountry,
+        interestLeague,
+        interestPlayer,
+      });
       alert("Logged in successfully!");
     }
   };

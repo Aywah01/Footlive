@@ -35,7 +35,7 @@ const News: React.FC = () => {
           "https://openapi.naver.com/v1/search/news",
           {
             headers: {
-              Authorization: `Bearer YOUR_API_KEY_HERE`,
+              Authorization: `U8P7YcjxFWJE797Vj2MBcRQNWCRPJ0`,
             },
           }
         );
