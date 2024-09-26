@@ -27,6 +27,7 @@ const Header: React.FC = () => {
       "player statistics": "/stats/player",
       "match details": "/stats/match",
       "team statistics": "/stats/team",
+      "team details": "/stats/team-details",
       profile: "/profile",
       login: "/login",
       signup: "/signup",
@@ -118,6 +119,11 @@ const Header: React.FC = () => {
                   <li>
                     <Link className="dropdown-item" to="/stats/team">
                       Team Statistics
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/stats/team-details">
+                      Team Details
                     </Link>
                   </li>
                 </ul>
