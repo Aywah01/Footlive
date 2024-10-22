@@ -74,6 +74,8 @@ const Home: React.FC = () => {
 
 export default Home;
 
+//so the line is from 17-77 only
+
 // import React, { useEffect, useState } from "react";
 // import axios from "axios";
 

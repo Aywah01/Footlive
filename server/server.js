@@ -10,7 +10,7 @@ app.use(express.json());
 
 // Connect to the MySQL database
 const db = mysql.createConnection({
-    host: 'localhost',
+    host: 'localhost:3306',
     user: 'root',
     password: 'Polifoli135.',
     database: 'footlive' // Your database name
