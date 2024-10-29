@@ -1,0 +1,45 @@
+.teamDetailsContainer {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for better readability */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 800px; /* Set a max-width for the container */
+    margin: 0 auto; /* Center the container */
+    text-align: center; /* Center align text */
+  }
+  
+  .teamName {
+    color: #333; /* Dark text for team name */
+    margin-bottom: 20px; /* Space below team name */
+    font-size: 2em; /* Larger font size for team name */
+  }
+  
+  .teamLogo {
+    width: 150px; /* Fixed width for team logo */
+    height: auto; /* Automatic height to maintain aspect ratio */
+    margin-bottom: 20px; /* Space below logo */
+  }
+  
+  .detailsContainer {
+    margin-bottom: 20px; /* Space below details */
+  }
+  
+  .detailsContainer p {
+    font-size: 1.1em; /* Slightly larger text */
+    margin: 5px 0; /* Vertical margin for paragraphs */
+  }
+  
+  .moreInfoButton {
+    padding: 10px 15px; /* Button padding */
+    background-color: #007bff; /* Primary button color */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+  }
+  
+  .moreInfoButton:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  

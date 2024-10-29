@@ -1,23 +1,56 @@
-/* news.module.css */
-
 .newsContainer {
-    padding: 20px;
-    max-width: 800px;
-    margin: 50px auto;
-    background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    max-width: 1200px; /* Maximum width of the container */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Padding around the content */
   }
   
   .newsTitle {
-    color: #343a40;
-    font-size: 2em;
-    margin-bottom: 10px;
+    font-size: 2.5rem; /* Title size */
+    color: #007bff; /* Primary color for the title */
+    text-align: center; /* Centered title */
+    margin-bottom: 15px; /* Margin below the title */
   }
   
   .newsParagraph {
-    color: #6c757d;
-    font-size: 1.2em;
-    line-height: 1.5;
+    font-size: 1.2rem; /* Paragraph size */
+    color: #333; /* Darker text color */
+    margin-bottom: 30px; /* Margin below the paragraph */
+    text-align: center; /* Centered paragraph */
+  }
+  
+  .gridContainer {
+    display: grid; /* Enable grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between grid items */
+  }
+  
+  .gridItem {
+    background-color: #f8f9fa; /* Light background for articles */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Padding inside grid items */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s; /* Smooth hover effect */
+  }
+  
+  .gridItem:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  
+  .articleTitle {
+    font-size: 1.5rem; /* Title size for articles */
+    color: #343a40; /* Darker text for article titles */
+    margin-bottom: 10px; /* Margin below the article title */
+  }
+  
+  .articleContent {
+    font-size: 1rem; /* Content size */
+    color: #555; /* Gray color for the content */
+    margin-bottom: 10px; /* Margin below the content */
+  }
+  
+  .articleDate {
+    font-size: 0.9rem; /* Smaller size for the date */
+    color: #888; /* Lighter gray for the date */
+    text-align: right; /* Right align the date */
   }
   

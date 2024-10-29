@@ -1,23 +1,58 @@
-/* news.module.css */
-
 .shopContainer {
-    padding: 20px;
-    max-width: 800px;
-    margin: 50px auto;
-    background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-  }
-  
-  .shopTitle {
-    color: #343a40;
-    font-size: 2em;
-    margin-bottom: 10px;
-  }
-  
-  .shopParagraph {
-    color: #6c757d;
-    font-size: 1.2em;
-    line-height: 1.5;
-  }
-  
+  max-width: 1200px; /* Maximum width for the shop container */
+  margin: 0 auto; /* Center the container */
+  padding: 20px; /* Padding around the content */
+}
+
+.shopTitle {
+  font-size: 2.5rem; /* Title size */
+  color: #007bff; /* Primary color for the title */
+  text-align: center; /* Centered title */
+  margin-bottom: 15px; /* Margin below the title */
+}
+
+.shopParagraph {
+  font-size: 1.2rem; /* Paragraph size */
+  color: #333; /* Darker text color */
+  text-align: center; /* Centered paragraph */
+  margin-bottom: 30px; /* Margin below the paragraph */
+}
+
+.gridContainer {
+  display: grid; /* Enable grid layout */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between grid items */
+}
+
+.gridItem {
+  background-color: #f8f9fa; /* Light background for items */
+  border-radius: 8px; /* Rounded corners */
+  padding: 15px; /* Padding inside grid items */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.2s; /* Smooth hover effect */
+}
+
+.gridItem:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.itemImage {
+  width: 100%; /* Image takes full width of the item */
+  border-radius: 8px; /* Rounded image corners */
+}
+
+.itemName {
+  font-size: 1.5rem; /* Title size for items */
+  color: #343a40; /* Darker text for item titles */
+  margin: 10px 0; /* Margin above and below the item title */
+}
+
+.itemDescription {
+  font-size: 1rem; /* Description size */
+  color: #555; /* Gray color for the description */
+  margin-bottom: 10px; /* Margin below the description */
+}
+
+.separator {
+  border: none; /* Remove the default border */
+}

@@ -2,6 +2,32 @@ import React from "react";
 import styles from "./news.module.css";
 
 const News: React.FC = () => {
+  const articles = [
+    {
+      title: "Football Championship Highlights",
+      content:
+        "Check out the highlights from last night's thrilling championship match.",
+      date: "October 27, 2024",
+    },
+    {
+      title: "Player Transfer News",
+      content: "The latest updates on player transfers and team changes.",
+      date: "October 28, 2024",
+    },
+    {
+      title: "Injury Updates",
+      content:
+        "Stay informed with the latest injury reports as the season progresses.",
+      date: "October 29, 2024",
+    },
+    {
+      title: "Upcoming Matches",
+      content: "Get ready for the exciting matches scheduled for this weekend.",
+      date: "October 29, 2024",
+    },
+    // Add more articles as needed
+  ];
+
   return (
     <div className={styles.newsContainer}>
       <h1 className={styles.newsTitle}>News</h1>
@@ -9,82 +35,17 @@ const News: React.FC = () => {
         Welcome to the News page. Here you will find the latest football news
         and updates.
       </p>
+      <div className={styles.gridContainer}>
+        {articles.map((article, index) => (
+          <div key={index} className={styles.gridItem}>
+            <h2 className={styles.articleTitle}>{article.title}</h2>
+            <p className={styles.articleContent}>{article.content}</p>
+            <span className={styles.articleDate}>{article.date}</span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
 
 export default News;
-
-// import React, { useEffect, useState } from "react";
-
-// interface NewsItem {
-//   title: string;
-//   description: string;
-//   url: string;
-// }
-
-// const News: React.FC = () => {
-//   const [news, setNews] = useState<NewsItem[]>([]);
-//   const [loading, setLoading] = useState<boolean>(true);
-//   const [error, setError] = useState<string | null>(null);
-
-//   useEffect(() => {
-//     const fetchNews = async () => {
-//       try {
-//         const response = await fetch(
-//           "https://openapi.naver.com/v1/search/news",
-//           {
-//             headers: {
-//               Authorization: `_API_KEY`,
-//             },
-//           }
-//         );
-//         if (!response.ok) {
-//           throw new Error("Failed to fetch news");
-//         }
-//         const data = await response.json();
-//         setNews(data.articles);
-//       } catch (err) {
-//         if (err instanceof Error) {
-//           setError(err.message);
-//         } else {
-//           setError("An unknown error occurred");
-//         }
-//       } finally {
-//         setLoading(false);
-//       }
-//     };
-
-//     fetchNews();
-//   }, []);
-
-//   if (loading) {
-//     return <div>Loading...</div>;
-//   }
-
-//   if (error) {
-//     return <div>Error: {error}</div>;
-//   }
-
-//   return (
-//     <div>
-//       <h1>News</h1>
-//       <p>
-//         Welcome to the News page. Here you will find the latest football news
-//         and updates.
-//       </p>
-//       <ul>
-//         {news.map((item, index) => (
-//           <li key={index}>
-//             <a href={item.url} target="_blank" rel="noopener noreferrer">
-//               <h2>{item.title}</h2>
-//               <p>{item.description}</p>
-//             </a>
-//           </li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// };
-
-// export default News;

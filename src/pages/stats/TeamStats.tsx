@@ -1,100 +1,93 @@
 import React from "react";
+import styles from "./teamStats.module.css"; // Assume you have this CSS file
 
 const TeamStats: React.FC = () => {
-  // Example data
-  const team = {
-    name: "Team A",
-    wins: 12,
-    draws: 5,
-    losses: 3,
-  };
+  // Example data for multiple teams
+  const teams = [
+    {
+      name: "Team A",
+      logo: "https://via.placeholder.com/100", // Replace with actual logo
+      goals: 55,
+      assists: 30,
+      cleanSheets: 10,
+      leaguePosition: 1,
+      players: [
+        { name: "Player 1", goals: 20 },
+        { name: "Player 2", goals: 15 },
+        { name: "Player 3", goals: 10 },
+      ],
+    },
+    {
+      name: "Team B",
+      logo: "https://via.placeholder.com/100", // Replace with actual logo
+      goals: 50,
+      assists: 35,
+      cleanSheets: 9,
+      leaguePosition: 2,
+      players: [
+        { name: "Player A", goals: 18 },
+        { name: "Player B", goals: 17 },
+        { name: "Player C", goals: 15 },
+      ],
+    },
+    {
+      name: "Team C",
+      logo: "https://via.placeholder.com/100", // Replace with actual logo
+      goals: 45,
+      assists: 25,
+      cleanSheets: 12,
+      leaguePosition: 3,
+      players: [
+        { name: "Player X", goals: 22 },
+        { name: "Player Y", goals: 12 },
+        { name: "Player Z", goals: 10 },
+      ],
+    },
+    {
+      name: "Team D",
+      logo: "https://via.placeholder.com/100", // Replace with actual logo
+      goals: 40,
+      assists: 20,
+      cleanSheets: 8,
+      leaguePosition: 4,
+      players: [
+        { name: "Player 4", goals: 16 },
+        { name: "Player 5", goals: 14 },
+        { name: "Player 6", goals: 8 },
+      ],
+    },
+  ];
 
   return (
-    <div className="container mt-5">
+    <div className={`container ${styles.teamStatsContainer}`}>
       <h2>Team Statistics</h2>
-      <h3>{team.name}</h3>
-      <p>Wins: {team.wins}</p>
-      <p>Draws: {team.draws}</p>
-      <p>Losses: {team.losses}</p>
+      <div className={styles.teamGrid}>
+        {teams.map((team, index) => (
+          <div key={index} className={styles.teamCard}>
+            <img
+              src={team.logo}
+              alt={`${team.name} logo`}
+              className={styles.teamLogo}
+            />
+            <h3>{team.name}</h3>
+            <p>Goals: {team.goals}</p>
+            <p>Assists: {team.assists}</p>
+            <p>Clean Sheets: {team.cleanSheets}</p>
+            <p>League Position: {team.leaguePosition}</p>
+            <h4>Top Players</h4>
+            <ul>
+              {team.players.map((player, idx) => (
+                <li key={idx}>
+                  {player.name} (Goals: {player.goals})
+                </li>
+              ))}
+            </ul>
+            <button className={styles.moreInfoButton}>More Information</button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
 
 export default TeamStats;
-
-// import React, { useEffect, useState } from "react";
-// import axios from "axios";
-
-// const TeamStatistics: React.FC = () => {
-//   const [statistics, setStatistics] = useState<any>(null);
-//   const [loading, setLoading] = useState(true);
-//   const [error, setError] = useState<string | null>(null);
-
-//   useEffect(() => {
-//     // Function to fetch team statistics from the API
-//     const fetchTeamStatistics = async () => {
-//       try {
-//         const response = await axios.get(
-//           "https://api-football-v1.p.rapidapi.com/v3/teams/statistics",
-//           {
-//             headers: {
-//               "x-rapidapi-host": "api-football-v1.p.rapidapi.com",
-//               "x-rapidapi-key":
-//                 "f3100dc649msh171183fec421b41p1aa1e9jsnc33840fe3e6c",
-//             },
-//             params: {
-//               league: "39", // Premier League
-//               season: "2020",
-//               team: "33", // Manchester United
-//             },
-//           }
-//         );
-//         setStatistics(response.data.response); // Store the statistics data in state
-//         setLoading(false);
-//       } catch (err) {
-//         setError("Failed to fetch team statistics");
-//         setLoading(false);
-//       }
-//     };
-
-//     fetchTeamStatistics();
-//   }, []);
-
-//   if (loading) return <p>Loading...</p>;
-//   if (error) return <p>{error}</p>;
-//   if (!statistics) return <p>No statistics available.</p>;
-
-//   return (
-//     <div className="container mt-5">
-//       <h2>{statistics.team.name} - Team Statistics</h2>
-//       <img
-//         src={statistics.team.logo}
-//         alt={`${statistics.team.name} logo`}
-//         width="100"
-//       />
-//       <h3>League: {statistics.league.name}</h3>
-//       <h4>Season: {statistics.league.season}</h4>
-
-//       <h5>Fixtures Played: {statistics.fixtures.played.total}</h5>
-//       <h5>Wins: {statistics.fixtures.wins.total}</h5>
-//       <h5>Draws: {statistics.fixtures.draws.total}</h5>
-//       <h5>Losses: {statistics.fixtures.loses.total}</h5>
-
-//       <h5>Goals For: {statistics.goals.for.total}</h5>
-//       <h5>Goals Against: {statistics.goals.against.total}</h5>
-
-//       <h5>Clean Sheets: {statistics.clean_sheet.total}</h5>
-//       <h5>Failed to Score: {statistics.failed_to_score.total}</h5>
-
-//       <h5>Penalty Statistics</h5>
-//       <p>Penalties Scored: {statistics.penalty.scored.total}</p>
-//       <p>Penalties Missed: {statistics.penalty.missed.total}</p>
-
-//       <h5>Cards</h5>
-//       <p>Red Cards: {statistics.cards.red["16-30"].total} (16-30 mins)</p>
-//       <p>Yellow Cards: {statistics.cards.yellow["0-15"].total} (0-15 mins)</p>
-//     </div>
-//   );
-// };
-
-// export default TeamStatistics;
