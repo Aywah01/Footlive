@@ -1,61 +1,192 @@
 .homeContainer {
-    padding: 20px;
-    background-color: #ffffff; /* White background */
-    color: #333; /* Dark text color */
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    max-width: 900px; /* Maximum width for the container */
-    margin: 0 auto; /* Center the container */
-  }
-  
-  h2 {
-    text-align: center; /* Center align the main title */
-    margin-bottom: 15px;
-  }
-  
-  h3 {
-    color: #007bff; /* Blue color for league titles */
-    cursor: pointer; /* Pointer cursor for clickable titles */
-    border-bottom: 2px solid #ddd; /* Underline effect */
-    margin: 20px 0 10px; /* Spacing around section titles */
-  }
-  
-  .leagueTable {
-    width: 100%; /* Full width for the table */
-    border-collapse: collapse; /* Collapse borders */
-    margin-bottom: 20px; /* Space below the table */
-    background-color: #f9f9f9; /* Light background for the table */
-  }
-  
-  .leagueTable th,
-  .leagueTable td {
-    border: 1px solid #ddd; /* Light border for cells */
-    padding: 8px; /* Padding in cells */
-    text-align: center; /* Center text in table */
-  }
-  
-  .leagueTable th {
-    background-color: #007bff; /* Blue background for the header cells */
-    color: white; /* White text for the header */
-  }
-  
-  .fixturesTitle {
-    color: #333; /* Dark gray for the fixtures title */
-    cursor: pointer; /* Pointer cursor for clickable title */
-    text-align: center; /* Center align the title */
-    margin: 10px 0; /* Margin around fixtures title */
-  }
-  
-  .fixturesList {
-    list-style-type: none; /* Remove default bullet points for list */
-    padding: 0; /* Remove padding on the list */
-    text-align: center; /* Center align list items */
-  }
-  
-  .fixtureItem {
-    background-color: #e1e1e1; /* Light gray for list items */
-    border-radius: 5px; /* Rounded corners */
-    padding: 5px; /* Padding for list items */
-    margin: 5px 0; /* Vertical margin for spacing */
-  }
-  
+  padding: 20px;
+  background-color: #ffffff; /* White background for the main container */
+  color: #333; /* Dark text color */
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+  max-width: 1400px; /* Maximum width for the container */
+  margin: 0 auto; /* Center the container */
+}
+
+h2 {
+  text-align: center; /* Center align the main headings */
+  color: #4A0080; /* Thematic color */
+  margin: 20px 0 15px; /* Increased spacing for better visual hierarchy */
+}
+
+.tableContainer {
+  margin-left: 20px; /* Spacing between sidebar and table section */
+  flex-grow: 1; /* Allow the table to take up remaining space */
+}
+
+table {
+  width: 100%; /* Full width for the table */
+  border-collapse: collapse; /* Collapse borders */
+  margin-top: 20px; /* Space above the table */
+}
+
+thead th {
+  background-color: #4A0080; /* Header background color */
+  color: white; /* Header text color */
+  padding: 12px; /* Padding for header cells */
+  font-size: 14px; /* Font size for header */
+  text-align: center; /* Center text in headers */
+}
+
+tbody tr {
+  transition: background-color 0.3s; /* Transition for hover effects */
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1; /* Light gray on hover */
+}
+
+tbody td {
+  padding: 10px; /* Padding for table cells */
+  border-bottom: 1px solid #ddd; /* Light border for cells */
+  font-size: 14px; /* Font size for table cells */
+}
+
+tbody td:first-child {
+  font-weight: bold; /* Bold for the position */
+  color: #4A0080; /* Thematic color for position */
+}
+
+tbody td:nth-child(2) {
+  font-weight: bold; /* Bold for the club name */
+}
+
+tbody td:nth-child(10) {
+  font-weight: bold; /* Bold for points */
+}
+
+.form {
+  display: inline-block; /* Inline block for form indicators */
+  width: 20px; /* Fixed width for indicators */
+  height: 20px; /* Fixed height for indicators */
+  text-align: center; /* Center text in indicators */
+  line-height: 20px; /* Center text vertically */
+  border-radius: 50%; /* Rounded indicators */
+  margin: 0 2px; /* Margin around indicators */
+  color: black; /* Text color for indicators */
+  font-size: 12px; /* Font size for indicators */
+}
+
+.form.w {
+  background-color: #4caf50; /* Green for wins */
+}
+
+.form.d {
+  background-color: #ff9800; /* Orange for draws */
+}
+
+.form.l {
+  background-color: #f44336; /* Red for losses */
+}
+
+.next {
+  font-weight: bold; /* Bold for 'Next' matches */
+  color: #4A0080; /* Thematic color */
+}
+
+.leagueContainer {
+  display: flex; /* Display sidebar and table in a row */
+  gap: 20px; /* Gap between sidebar and table */
+  margin-top: 20px; /* Margin for spacing above */
+}
+
+.sidebar {
+  width: 25%; /* Set width for sidebar */
+  background-color: #f3f4f6; /* Light gray for sidebar */
+  padding: 20px; /* Add padding */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.leagueTitle {
+  cursor: pointer; /* Pointer cursor for clickable items */
+  color: #4A0080; /* Thematic color for league titles */
+  margin: 10px 0; /* Spacing between titles */
+  padding: 10px; /* Add padding around titles */
+  transition: background-color 0.3s; /* Transition for hover effects */
+}
+
+.leagueTitle:hover {
+  background-color: #eaeaea; /* Light gray on hover */
+}
+
+.teamDetails {
+  margin-top: 20px; /* Space above team details */
+}
+
+.matchDetails {
+  margin-top: 20px; /* Space above match
+  padding: 15px;
+    background-color: #fdfdfe; /* Very light background for details */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #eaeaea;
+    padding: 20px; /* Spacing between titles */
+}
+
+.matchDetails h4 {
+    color: #4A0080; /* Thematic color for team name */
+    margin-bottom: 10px; /* Space below team name */
+}
+
+.matchDetails ul {
+    list-style-type: none; /* Remove bullet points */
+    padding-left: 0; /* Remove left padding */
+}
+
+.teamSelect {
+    cursor: pointer; /* Pointer cursor for clickable team names */
+    color: #007bff; /* Thematic blue color for team names */
+    margin: 5px 0; /* Spacing around team names */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.teamSelect:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+.tableTeamLogo {
+    width: 20px; /* Logo size */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 5px; /* Space between logo and team name */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 600px) {
+    .homeContainer {
+        padding: 15px; /* Adjust padding */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Smaller font size for smaller screens */
+    }
+
+    table {
+        font-size: 12px; /* Slightly smaller font size for table */
+    }
+
+    .form {
+        width: 20px; /* Smaller indicator size */
+        height: 20px; /* Adjust height */
+        line-height: 20px; /* Center text vertically */
+    }
+
+    .leagueContainer {
+        flex-direction: column; /* Stack sidebar and table on small screens */
+        align-items: center; /* Center the contents */
+    }
+
+    .sidebar {
+        width: 100%; /* Full width for sidebar on small screens */
+        margin-bottom: 20px; /* Space below sidebar */
+    }
+
+    .tableContainer {
+        width: 100%; /* Full width for table on small screens */
+    }
+}

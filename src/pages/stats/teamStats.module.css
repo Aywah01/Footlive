@@ -35,8 +35,8 @@
   .teamLogo {
     width: 100px; /* Fixed width for team logos */
     height: 100px; /* Fixed height for team logos */
-    border-radius: 50%; /* Circular logos */
-    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 20%; /* Circular logos */
+    object-fit: fill; /* Maintain aspect ratio */
     margin-bottom: 10px; /* Space below logo */
   }
   
