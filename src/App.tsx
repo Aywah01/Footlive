@@ -62,6 +62,7 @@ import PlayerStats from "./pages/stats/PlayerStats";
 import MatchDetails from "./pages/stats/MatchDetails";
 import TeamStats from "./pages/stats/TeamStats";
 import TeamDetails from "./pages/stats/TeamDetails";
+import FootliveChatbot from "./FootliveChatbot";
 import { AuthProvider } from "./context/AuthContext";
 import "./App.css";
 
@@ -84,6 +85,7 @@ const App: React.FC = () => {
               <Route path="/stats/player" element={<PlayerStats />} />
               <Route path="/stats/match" element={<MatchDetails />} />
               <Route path="/stats/team" element={<TeamStats />} />
+              <Route path="/FootliveChatbot" element={<FootliveChatbot />} />
               <Route
                 path="/stats/team-details"
                 element={<TeamDetails />}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Footlive AI Chatbot</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <script>
+      // Ensures the JavaScript runs after the DOM is fully loaded
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("chat-form").onsubmit = function (e) {
+          e.preventDefault(); // Prevent the default form submission
+          var userInput = document.getElementById("user-input").value;
+          fetch("/ask", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ message: userInput }),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              let tipsHtml = data.tips.join("<br>") || "No tips found.";
+              let videoHtml =
+                data.video !== "No video found."
+                  ? `<br><a href="${data.video}" target="_blank">Watch Suggested Video</a>`
+                  : "";
+
+              document.getElementById("response").innerHTML =
+                tipsHtml + videoHtml;
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+              document.getElementById("response").innerHTML =
+                "An error occurred while fetching data.";
+            });
+        };
+      });
+    </script>
+  </head>
+  <body>
+    <div id="chat-container">
+      <h1>Footlive AI Chatbot</h1>
+      <p>Ask me anything about football!</p>
+      <form id="chat-form">
+        <input
+          type="text"
+          id="user-input"
+          placeholder="Ask about football..."
+          required
+        />
+        <input type="submit" value="Send" />
+      </form>
+      <div id="response"></div>
+    </div>
+  </body>
+</html>
